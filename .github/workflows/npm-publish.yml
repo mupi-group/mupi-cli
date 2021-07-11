@@ -21,6 +21,7 @@ jobs:
 
   npm-publish:
     name: npm-publish
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
