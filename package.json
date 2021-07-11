@@ -10,7 +10,7 @@
     "start:build": "node -r ts-node/register -r tsconfig-paths/register build/bin/mupi.js"
   },
   "bin": {
-    "mupi": "build/bin/mupi.ts"
+    "mupi": "build/bin/mupi.js"
   },
   "keywords": [],
   "author": "",
