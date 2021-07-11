@@ -1,10 +1,10 @@
 {
   "name": "@mupi/cli",
-  "version": "0.0.2-alpha.3",
+  "version": "0.0.2-alpha.4",
   "description": "",
   "scripts": {
     "clean": "rm -rf build",
-    "build": "yarn clean && tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.json",
     "build:webpack": "webpack",
     "start": "ts-node -r tsconfig-paths/register bin/mupi.ts",
     "start:build": "node -r ts-node/register -r tsconfig-paths/register build/bin/mupi.js"
