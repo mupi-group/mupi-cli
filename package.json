@@ -7,7 +7,8 @@
     "build": "tsc -p tsconfig.json",
     "build:webpack": "webpack",
     "start": "ts-node -r tsconfig-paths/register bin/mupi.ts",
-    "start:build": "node -r ts-node/register -r tsconfig-paths/register build/bin/mupi.js"
+    "start:build": "node -r ts-node/register -r tsconfig-paths/register build/bin/mupi.js",
+    "prepublish": "npm run build"
   },
   "bin": {
     "mupi": "build/bin/mupi.js"
