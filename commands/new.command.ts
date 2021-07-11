@@ -3,7 +3,7 @@ import { Command } from 'commander';
 import { BaseCommand } from '@root/commands/base.command';
 import { Input } from '@root/commands/command.input';
 
-export class CreateCommand extends BaseCommand {
+export class NewCommand extends BaseCommand {
   public load(program: Command) {
     program
       .command('new [name]')

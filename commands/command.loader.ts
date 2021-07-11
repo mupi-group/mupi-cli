@@ -5,9 +5,13 @@ import { ERROR_PREFIX } from '@root/lib/ui';
 import { CreateCommand } from '@root/commands/create.command';
 import { CreateAction } from '@root/actions/create.action';
 
+import { NewCommand } from '@root/commands/new.command';
+import { NewAction } from '@root/actions/new.action';
+
 export class CommandLoader {
   public static load(program: Command): void {
     new CreateCommand(new CreateAction()).load(program);
+    new NewCommand(new NewAction()).load(program);
     this.handleInvalidCommand(program);
   }
 
