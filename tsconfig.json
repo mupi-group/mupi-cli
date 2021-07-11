@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "declaration": true,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "outDir": "./build",
+    "incremental": true,
+    "paths": {
+      "*": [
+        "node_modules/*"
+      ],
+      "@root/*": ["./*"]
+    },
+    "strict": true
+  },
+  "include": ["actions", "bin", "commands", "lib"]
+}

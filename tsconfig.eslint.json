@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "actions",
+    "bin",
+    "commands",
+    "lib",
+    ".eslintrc.js",
+    "jest.config.ts",
+    "webpack.config.ts"
+  ]
+}

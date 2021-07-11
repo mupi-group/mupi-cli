@@ -1,0 +1,25 @@
+.idea/
+/.vscode
+.gitignore
+.prettierrc
+.travis.yml
+Makefile
+node_modules/
+.DS_Store
+CONTRIBUTE.md
+
+# source
+**/*.ts
+*.ts
+/test
+
+# definitions
+!**/*.d.ts
+!*.d.ts
+
+# configuration
+.eslintrc.js
+renovate.json
+tsconfig.json
+tools
+/test/jest-config.json
