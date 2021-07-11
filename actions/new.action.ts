@@ -13,7 +13,7 @@ import { generateInput } from '@root/lib/questions/questions';
 export class CreateAction extends BaseAction {
   public async handle(inputs?: Input[]): Promise<void> {
     await this.askForMissingInformation(inputs!);
-    console.info('This feature is under developing now~');
+    console.info('This feature is under developing now!');
   }
 
   private replaceInputMissingInformation = (
