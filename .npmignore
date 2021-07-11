@@ -1,21 +1,19 @@
+node_modules/
 .idea/
 /.vscode
+/.github
+
 .gitignore
 .prettierrc
-.travis.yml
-Makefile
-node_modules/
 .DS_Store
 CONTRIBUTE.md
 
 # source
-**/*.ts
-*.ts
+/actions
+/bin
+/commands
+/lib
 /test
-
-# definitions
-!**/*.d.ts
-!*.d.ts
 
 # configuration
 .eslintrc.js

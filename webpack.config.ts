@@ -1,5 +1,5 @@
-import * as path from 'path';
-import * as webpack from 'webpack';
+import { resolve } from 'path';
+import webpack from 'webpack';
 import TsConfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 
 /* setup all npm packages as externals */
@@ -15,8 +15,8 @@ const config: webpack.Configuration = {
   target: 'node',
   watch: process.env.NODE_ENV === 'development',
   output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'index.js',
+    path: resolve(__dirname, 'build'),
+    filename: 'mupi.js',
   },
   externals: [nodeExternals()],
   module: {
@@ -27,8 +27,11 @@ const config: webpack.Configuration = {
           {
             loader: 'ts-loader',
             options: {
-              configFile: path.resolve(__dirname, 'tsconfig.json'),
+              configFile: resolve(__dirname, 'tsconfig.json'),
             },
+          },
+          {
+            loader: 'shebang-loader',
           },
         ],
         exclude: /node_modules/,
@@ -39,7 +42,7 @@ const config: webpack.Configuration = {
     extensions: ['.ts', '.js'],
     plugins: [
       new TsConfigPathsPlugin({
-        configFile: path.resolve(__dirname, 'tsconfig.json'),
+        configFile: resolve(__dirname, 'tsconfig.json'),
       }),
     ],
   },
@@ -53,7 +56,9 @@ const config: webpack.Configuration = {
     __filename: false,
     __dirname: false,
   },
-  plugins: [],
+  plugins: [
+    new webpack.BannerPlugin({ banner: '#!/usr/bin/env node', raw: true }),
+  ],
 };
 
 export default config;

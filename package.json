@@ -1,17 +1,15 @@
 {
   "name": "@mupi/cli",
-  "version": "0.0.2-alpha.5",
+  "version": "0.0.2-alpha.6",
   "description": "",
   "scripts": {
     "clean": "rm -rf build",
-    "build": "tsc -p tsconfig.json",
-    "build:webpack": "webpack",
+    "build": "webpack",
     "start": "ts-node -r tsconfig-paths/register bin/mupi.ts",
-    "start:build": "node -r ts-node/register -r tsconfig-paths/register build/bin/mupi.js",
     "prepublish": "npm run build"
   },
   "bin": {
-    "mupi": "build/bin/mupi.js"
+    "mupi": "build/mupi.js"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +26,7 @@
     "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-plugin-import": "^2.23.4",
     "jest": "^27.0.6",
+    "shebang-loader": "^0.0.1",
     "ts-jest": "^27.0.3",
     "ts-loader": "^9.2.3",
     "ts-node": "^10.1.0",
