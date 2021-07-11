@@ -20,4 +20,6 @@ CONTRIBUTE.md
 renovate.json
 tsconfig.json
 tools
-/test/jest-config.json
+jest.config.ts
+tsconfig.eslint.json
+webpack.config.ts
