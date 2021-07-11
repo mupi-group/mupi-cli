@@ -1,8 +1,7 @@
 {
   "name": "@mupi/cli",
-  "version": "0.0.2",
+  "version": "0.0.2-alpha.1",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "clean": "rm -rf build",
     "build": "yarn clean && tsc -p tsconfig.json",
