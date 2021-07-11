@@ -18,7 +18,7 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn build
 
-jobs:
+
   npm-publish:
     name: npm-publish
     runs-on: ubuntu-latest
