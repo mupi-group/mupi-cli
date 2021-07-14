@@ -1185,10 +1185,10 @@
     comment-json "^4.1.0"
     find-up "^4.1.0"
 
-"@mupi/schematics@^0.0.2-alpha.23":
-  version "0.0.2-alpha.23"
-  resolved "https://registry.yarnpkg.com/@mupi/schematics/-/schematics-0.0.2-alpha.23.tgz#af74cca6aa2a080e453deec48e8809dd05ddf40b"
-  integrity sha512-xR+P9dw4pdCx0DTfEciK/7WEYm/RlqHUWFB1pv9EIW7ldsX+q6SEl5aWJBU6ujRx/LGG3RmNQ2ih05z2H5LVoA==
+"@mupi/schematics@^0.0.2-alpha.24":
+  version "0.0.2-alpha.24"
+  resolved "https://registry.yarnpkg.com/@mupi/schematics/-/schematics-0.0.2-alpha.24.tgz#67807ff5dccc50c79f44916770b31f97b53da2a5"
+  integrity sha512-A20HX5QOBD2WoAolIOoqqLWo2vCtckTCK7PO+kGAxLNJB5Tn5okFoE0LJs2t6jV8u6iSMmb/O72aA+OVRlzh3A==
   dependencies:
     "@angular-devkit/core" "^12.1.1"
     "@angular-devkit/schematics" "^12.1.1"
