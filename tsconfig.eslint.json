@@ -5,8 +5,11 @@
     "bin",
     "commands",
     "lib",
+    "schematics",
+    "runners",
     ".eslintrc.js",
     "jest.config.ts",
     "webpack.config.ts"
-  ]
+  ],
+  "exclude": ["build"]
 }
