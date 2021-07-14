@@ -15,6 +15,11 @@ export class MupiCollection extends BaseCollection {
       alias: 'application',
       description: 'Generate a new application workspace',
     },
+    {
+      name: 'model',
+      alias: 'model',
+      description: 'Generate a new model for your application',
+    },
   ];
 
   constructor(runner: BaseRunner) {
