@@ -16,7 +16,7 @@ export class DestroyCommand extends BaseCommand {
             [
               'sh',
               `${join(__dirname, '../', 'bin', 'mupi:destroy.sh')}`,
-              name,
+              name || 'prod',
             ],
           );
       });

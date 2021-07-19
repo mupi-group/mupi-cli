@@ -16,7 +16,7 @@ export class DeployCommand extends BaseCommand {
             [
               'sh',
               `${join(__dirname, '../', 'bin', 'mupi:deploy.sh')}`,
-              name,
+              name || 'prod',
             ],
           );
       });

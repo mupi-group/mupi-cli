@@ -16,7 +16,7 @@ export class InitCommand extends BaseCommand {
             [
               'sh',
               `${join(__dirname, '../', 'bin', 'mupi:init.sh')}`,
-              name,
+              name || 'prod',
             ],
           );
       });
