@@ -1,10 +1,10 @@
 {
   "name": "@mupi/cli",
-  "version": "0.0.2-alpha.27",
+  "version": "0.0.2-alpha.28",
   "description": "",
   "scripts": {
     "start": "ts-node -r tsconfig-paths/register bin/mupi.ts",
-    "build": "tsc && tsc-alias",
+    "build": "tsc && tsc-alias && cpx 'bin/*.sh' build/bin",
     "clean": "rm -rf build",
     "prepublish": "npm run build"
   },
@@ -42,6 +42,7 @@
     "chalk": "^4.1.1",
     "cli-table3": "^0.6.0",
     "commander": "^8.0.0",
+    "cpx": "^1.5.0",
     "inquirer": "^8.1.1",
     "node-emoji": "^1.10.0"
   }
