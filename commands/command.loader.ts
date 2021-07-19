@@ -10,8 +10,8 @@ import { NewAction } from '@root/actions/new.action';
 
 export class CommandLoader {
   public static load(program: Command): void {
-    new CreateCommand(new CreateAction()).load(program);
     new NewCommand(new NewAction()).load(program);
+    new CreateCommand(new CreateAction()).load(program);
     this.handleInvalidCommand(program);
   }
 

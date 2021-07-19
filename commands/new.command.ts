@@ -15,8 +15,8 @@ export class NewCommand extends BaseCommand {
 Default cloud service you want to choose(aws by default)\n
 ${NewCommand.buildServiceDescriptionAsTable([
     { name: 'aws', alias: 'amazon' },
-    { name: 'ali', alias: 'aliyun' },
-    { name: 'azure', alias: 'microsoft' },
+    // { name: 'ali', alias: 'aliyun' },
+    // { name: 'azure', alias: 'microsoft' },
   ])}\n
 `,
       )
