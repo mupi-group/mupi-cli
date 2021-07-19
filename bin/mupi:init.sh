@@ -16,9 +16,9 @@ if [ $1 ] && [ -d $2/env/$1 ]; then
     terraform init
   fi
 
-  else
+else
   echo "\noops, mupi can't find the env you want to init: '$1'"
   echo "you may create env '$1' first"
-  exit 1;
+  exit 1
 
 fi
