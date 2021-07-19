@@ -13,10 +13,6 @@ const bootstrap = () => {
 
   CommandLoader.load(program);
 
-  program.command('mupi:init', 'init terraform infrastructures by mupi');
-  program.command('mupi:deploy', 'deploy terraform infrastructures by mupi');
-  program.command('mupi:destroy', 'destroy terraform infrastructures by mupi');
-
   program.parse(process.argv);
 
   if (!process.argv.slice(2).length) {

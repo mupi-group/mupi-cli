@@ -1,12 +1,12 @@
 #!/bin/bash
 set -e
 
-if [ $1 ] && [ -d $(dirname "$0")/../env/$1 ]; then
+if [ $1 ] && [ -d $2/env/$1 ]; then
 
   # checkin workspace
-  cd "$(dirname "$0")/../env/$1"
+  cd "$2/env/$1"
 
-  if [ ! -d $(dirname "$0")/../env/$1/.terraform ]; then
+  if [ ! -d $2/env/$1/.terraform ]; then
     # if the workspace hasn't been created
     terraform init
     terraform workspace new $1
@@ -15,5 +15,10 @@ if [ $1 ] && [ -d $(dirname "$0")/../env/$1 ]; then
     # if already has its workspace
     terraform init
   fi
+
+  else
+  echo "\noops, mupi can't find the env you want to init: '$1'"
+  echo "you may create env '$1' first"
+  exit 1;
 
 fi

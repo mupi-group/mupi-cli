@@ -2,16 +2,23 @@ import chalk from 'chalk';
 import { Command } from 'commander';
 import { ERROR_PREFIX } from '@root/lib/ui';
 
-import { CreateCommand } from '@root/commands/create.command';
+import { CreateModelCommand } from '@root/commands/create.model.command';
 import { CreateAction } from '@root/actions/create.action';
 
 import { NewCommand } from '@root/commands/new.command';
 import { NewAction } from '@root/actions/new.action';
+import { InitCommand } from '@root/commands/init.command';
+import { TerraformBasedAction } from '@root/actions/terraform.based.action';
+import { DestroyCommand } from '@root/commands/destroy.command';
+import { DeployCommand } from '@root/commands/deploy.command';
 
 export class CommandLoader {
   public static load(program: Command): void {
     new NewCommand(new NewAction()).load(program);
-    new CreateCommand(new CreateAction()).load(program);
+    new CreateModelCommand(new CreateAction()).load(program);
+    new InitCommand(new TerraformBasedAction()).load(program);
+    new DeployCommand(new TerraformBasedAction()).load(program);
+    new DestroyCommand(new TerraformBasedAction()).load(program);
     this.handleInvalidCommand(program);
   }
 

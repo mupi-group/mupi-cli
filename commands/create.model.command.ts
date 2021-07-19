@@ -2,10 +2,10 @@ import { Command } from 'commander';
 import { BaseCommand } from '@root/commands/base.command';
 import { Input } from '@root/commands/command.input';
 
-export class CreateCommand extends BaseCommand {
+export class CreateModelCommand extends BaseCommand {
   public load(program: Command) {
     program
-      .command('create [name]')
+      .command('create:model [name]')
       .description('create a mupi model for application')
       .option(
         '-e, --env [env]',
@@ -55,12 +55,12 @@ export class CreateCommand extends BaseCommand {
 
         options.push({
           name: 'service',
-          value: command.service || CreateCommand.findClosestMupiConfig().service || 'aws',
+          value: command.service || CreateModelCommand.findClosestMupiConfig().service || 'aws',
         });
 
         options.push({
           name: 'env',
-          value: CreateCommand.findClosestMupiConfig().env || 'prod',
+          value: CreateModelCommand.findClosestMupiConfig().env || 'prod',
         });
 
         inputs.push({ name: 'name', value: name });
