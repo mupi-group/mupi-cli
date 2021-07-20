@@ -13,12 +13,6 @@ A serverless solution that init, develop, deploy your code as micro service/fron
 <a href="https://github.com/mupi-group/mupi-cli/actions"><img src="https://github.com/mupi-group/mupi-cli/actions/workflows/npm-publish.yml/badge.svg" alt="NPM Downloads" /></a>
 </p>
 
-
-## Description
-
-The mupi CLI is a command line interface tool that help you to initialize, develop, deploy and maintain your mupi application.
-
-
 ## Installation
 
 ```shell
