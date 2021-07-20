@@ -14,7 +14,6 @@ A serverless solution that init, develop, deploy your code as micro service/fron
 </p>
 
 ## Installation
-
 ```shell
 $ yarn install -g @mupi/cli
 ```
