@@ -49,7 +49,7 @@ export class GenerateBackendAction extends BaseAction {
   private generateApplicationFiles = async (args: Input[], options: Input[]) => {
     try {
       require('ts-node').register();
-      const model = require(resolve(process.cwd(), `${args[0].value as string}.model.ts`));
+      const model = require(resolve(process.cwd(), 'model', `${args[0].value as string}.model.ts`));
       const schema:
       FormattedMupiModelStructure | boolean = formatThenResolveMupiModelStructure(model.default);
       if (!schema) throw new Error();
