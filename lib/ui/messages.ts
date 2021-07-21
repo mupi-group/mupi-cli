@@ -2,7 +2,7 @@ import { EMOJIS } from '@root/lib/ui/emojis';
 import chalk from 'chalk';
 import { ERROR_PREFIX, INFO_PREFIX } from '@root/lib/ui/prefixes';
 
-export const CREATE_MUPI_PROJECT_ASKING = `$\n${INFO_PREFIX} {EMOJIS.COFFEE}  mupi will create your project soon...`;
+export const CREATE_MUPI_PROJECT_ASKING = `$\n${INFO_PREFIX} ${EMOJIS.COFFEE}  mupi will create your project soon...`;
 export const CREATE_MUPI_MODEL_ASKING = `\n${INFO_PREFIX} ${EMOJIS.ZAP}  mupi generate the directory with a startup schema for you.`;
 export const GENERATE_MUPI_MODEL_ASKING = `\n${INFO_PREFIX} ${EMOJIS.ZAP}  mupi generate the code via the model you've defined.`;
 export const RUNNER_EXECUTION_ERROR = (command: string) => `\n${ERROR_PREFIX} failed to execute command: ${command}`;
