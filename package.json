@@ -1,6 +1,6 @@
 {
   "name": "@mupi/cli",
-  "version": "0.0.2-alpha.53",
+  "version": "0.0.2-alpha.54",
   "description": "",
   "scripts": {
     "start": "ts-node -r tsconfig-paths/register bin/mupi.ts",
@@ -24,8 +24,7 @@
     "@typescript-eslint/parser": "^4.28.2",
     "eslint": "^7.30.0",
     "eslint-config-airbnb-typescript": "^12.3.1",
-    "eslint-plugin-import": "^2.23.4",
-    "tsc-alias": "^1.3.7"
+    "eslint-plugin-import": "^2.23.4"
   },
   "dependencies": {
     "@angular-devkit/core": "11.2.6",
@@ -44,6 +43,8 @@
     "reflect-metadata": "^0.1.13",
     "ts-node": "^10.1.0",
     "tsconfig-paths": "^3.10.1",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "tslib": "^2.3.0",
+    "tsc-alias": "^1.3.7"
   }
 }
