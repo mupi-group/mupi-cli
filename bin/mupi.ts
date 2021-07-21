@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import 'reflect-metadata';
 import { Command } from 'commander';
 import { version } from '@root/package.json';
 import { CommandLoader } from '@root/commands';

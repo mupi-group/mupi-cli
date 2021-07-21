@@ -56,6 +56,7 @@ export class GenerateBackendAction extends BaseAction {
       console.log(GENERATE_MODEL_SUCCESSFULLY);
       console.log(schema);
     } catch (e) {
+      console.log(e);
       console.error(GENERATE_MODEL_FAILED);
     }
     // const collection: BaseCollection = new MupiCollection(new SchematicRunner());
