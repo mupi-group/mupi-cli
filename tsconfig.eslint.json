@@ -9,7 +9,8 @@
     "runners",
     ".eslintrc.js",
     "jest.config.ts",
-    "webpack.config.ts"
+    "webpack.config.ts",
+    "sample.model.ts"
   ],
   "exclude": ["build"]
 }

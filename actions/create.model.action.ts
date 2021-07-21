@@ -14,7 +14,7 @@ import { MupiCollection } from '@root/schematics/mupi.collection';
 import { SchematicOption } from '@root/schematics/schematic.option';
 import { SchematicRunner } from '@root/runners/schematic.runner';
 
-export class CreateAction extends BaseAction {
+export class CreateModelAction extends BaseAction {
   public async handle(inputs?: Input[], options?: Input[]): Promise<void> {
     await this.askForMissingInformation(inputs!);
     await this.generateApplicationFiles(inputs!, options!).catch((e) => console.error(e));

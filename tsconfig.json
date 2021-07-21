@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es5",
+    "target": "es6",
     "declaration": true,
     "removeComments": true,
     "esModuleInterop": true,
@@ -9,8 +9,11 @@
     "resolveJsonModule": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
+    "strictPropertyInitialization": false,
+    "noImplicitAny": false,
     "sourceMap": true,
     "baseUrl": ".",
+    "rootDir": ".",
     "outDir": "./build",
     "incremental": true,
     "paths": {
@@ -22,6 +25,7 @@
     "strict": true
   },
   "include": [
+    "node_modules/reflect-metadata",
     "actions",
     "bin",
     "commands",
