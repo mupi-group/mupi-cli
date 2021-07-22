@@ -50,13 +50,14 @@ export class GenerateBackendAction extends BaseAction {
     try {
       require('ts-node').register();
       const model = require(resolve(process.cwd(), 'model', `${args[0].value as string}.model.ts`));
+      console.log(model);
       const schema:
       FormattedMupiModelStructure | boolean = formatThenResolveMupiModelStructure(model.default);
+      console.log(schema);
       if (!schema) throw new Error();
       console.log(GENERATE_MODEL_SUCCESSFULLY);
       console.log(schema);
     } catch (e) {
-      console.log(e);
       console.error(GENERATE_MODEL_FAILED);
     }
     // const collection: BaseCollection = new MupiCollection(new SchematicRunner());

@@ -944,30 +944,21 @@
     comment-json "^4.1.0"
     find-up "^4.1.0"
 
-"@mupi/core@^0.0.2-alpha.10":
-  version "0.0.2-alpha.10"
-  resolved "https://registry.yarnpkg.com/@mupi/core/-/core-0.0.2-alpha.10.tgz#811f29b8fa9e2a8bf97905b9543e8ee23f257546"
-  integrity sha512-4VU0EwozAX4Gd6o2RiOpaE+3bNC96Gc1z+/4WaJUgKUtQq7GW180B9yya9K2UGwWUr/CkOb4SqGxNydL0z1eqA==
+"@mupi/core@^0.0.2-alpha.14":
+  version "0.0.2-alpha.14"
+  resolved "https://registry.yarnpkg.com/@mupi/core/-/core-0.0.2-alpha.14.tgz#2e89e072a38c7f3a78857b7d0e1a69ce67af1c59"
+  integrity sha512-j6sDlt8omKjYeLophllU1NjcYAXH5wbRoxf5slnSUUVcjkZleIBT8qFPKqfufwRjh+QzLkxeWoorL/0iuPJsiw==
   dependencies:
     reflect-metadata "^0.1.13"
     tslib "^2.3.0"
 
-"@mupi/core@^0.0.2-alpha.13":
-  version "0.0.2-alpha.13"
-  resolved "https://registry.yarnpkg.com/@mupi/core/-/core-0.0.2-alpha.13.tgz#61d2d914795b80c1d153b3c8538e99a29afa9f10"
-  integrity sha512-iDDa1lEmQHakQabjRCdlwW9Va7TWCR0CY0jW/AR/IRKbKNglBrvNglQ+teUXCmEbeHiecpWmqgQaJURkwTi8jw==
-  dependencies:
-    reflect-metadata "^0.1.13"
-    tslib "^2.3.0"
-
-"@mupi/schematics@^0.0.2-alpha.46":
-  version "0.0.2-alpha.46"
-  resolved "https://registry.yarnpkg.com/@mupi/schematics/-/schematics-0.0.2-alpha.46.tgz#e2a2934c21f1eb4791bfb51625b5b0d8fb09dedf"
-  integrity sha512-D7B7I9LOZniZ6qd4zS1R4cAeVqMD3DwLsO1MSByguYqdGXmIz12TOx1SB5iNuv/9NFyO86bvmZouvrfQsojb8Q==
+"@mupi/schematics@^0.0.2-alpha.48":
+  version "0.0.2-alpha.48"
+  resolved "https://registry.yarnpkg.com/@mupi/schematics/-/schematics-0.0.2-alpha.48.tgz#9005198df0ba54cae9feac249d5856cef9df3355"
+  integrity sha512-sX2iiV7CbibhiA2lf1s1/ljFO6oac9/TNm+JZHfTUxocTqu7dZMN9HkXjJu9ABnn07jfgHYxAHFPtl2uqnhJxQ==
   dependencies:
     "@angular-devkit/core" "^12.1.1"
     "@angular-devkit/schematics" "^12.1.1"
-    "@mupi/core" "^0.0.2-alpha.10"
     jsonc-parser "^3.0.0"
 
 "@nodelib/fs.scandir@2.1.5":
