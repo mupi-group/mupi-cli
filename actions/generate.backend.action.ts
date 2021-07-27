@@ -9,15 +9,13 @@ import { BaseAction } from '@root/actions/base.action';
 import { Input } from '@root/commands';
 import { CREATE_MUPI_MODEL_ASKING, GENERATE_MODEL_FAILED, GENERATE_MODEL_SUCCESSFULLY } from '@root/lib/ui/messages';
 import { generateInput } from '@root/lib/questions/questions';
-// import { BaseCollection } from '@root/schematics/base.collection';
-// import { MupiCollection } from '@root/schematics/mupi.collection';
-// import { SchematicOption } from '@root/schematics/schematic.option';
-// import { SchematicRunner } from '@root/runners/schematic.runner';
 import { resolve } from 'path';
-// eslint-disable-next-line import/extensions
 import { formatThenResolveMupiModelStructure } from '@mupi/core';
 import type { FormattedMupiModelStructure } from '@mupi/core';
-import { INFO_PREFIX } from '@root/lib/ui';
+import { BaseCollection } from '@root/schematics/base.collection';
+import { MupiCollection } from '@root/schematics/mupi.collection';
+import { SchematicRunner } from '@root/runners/schematic.runner';
+import { SchematicOption } from '@root/schematics/schematic.option';
 
 export class GenerateBackendAction extends BaseAction {
   public async handle(inputs?: Input[], options?: Input[]): Promise<void> {
@@ -50,23 +48,41 @@ export class GenerateBackendAction extends BaseAction {
     try {
       require('ts-node').register();
       const model = require(resolve(process.cwd(), 'model', `${args[0].value as string}.model.ts`));
-      console.log(model);
-      const schema:
+      let schema:
       FormattedMupiModelStructure | boolean = formatThenResolveMupiModelStructure(model.default);
-      console.log(schema);
       if (!schema) throw new Error();
       console.log(GENERATE_MODEL_SUCCESSFULLY);
-      console.log(schema);
+      schema = (schema as FormattedMupiModelStructure);
+      const collection: BaseCollection = new MupiCollection(new SchematicRunner());
+      // @ts-ignore
+      args.push(new SchematicOption(
+        'items',
+        (schema as FormattedMupiModelStructure).items.map((_) => JSON.stringify(_)),
+      ));
+      args.push(new SchematicOption('title', schema.title) as unknown as Input);
+      args.push(new SchematicOption('subtitle', schema.subtitle) as unknown as Input);
+      await collection.execute('graphql-schema', args
+        .concat(
+          options,
+        ).reduce(
+          (schematicOptions: SchematicOption[], option: Input) => {
+            schematicOptions.push(new SchematicOption(option.name, option.value));
+            return schematicOptions;
+          }, [],
+        ));
+      await collection.execute('express-service', args
+        .concat(
+          options,
+        ).reduce(
+          (schematicOptions: SchematicOption[], option: Input) => {
+            schematicOptions.push(new SchematicOption(option.name, option.value));
+            return schematicOptions;
+          }, [],
+        ));
+      console.info();
     } catch (e) {
       console.error(GENERATE_MODEL_FAILED);
     }
-    // const collection: BaseCollection = new MupiCollection(new SchematicRunner());
-    // await collection.execute('model', args.concat(options).reduce(
-    //   (schematicOptions: SchematicOption[], option: Input) => {
-    //     schematicOptions.push(new SchematicOption(option.name, option.value));
-    //     return schematicOptions;
-    //   }, [],
-    // ));
     console.info();
   };
 }

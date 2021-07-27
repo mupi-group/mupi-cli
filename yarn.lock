@@ -944,18 +944,18 @@
     comment-json "^4.1.0"
     find-up "^4.1.0"
 
-"@mupi/core@^0.0.2-alpha.14":
-  version "0.0.2-alpha.14"
-  resolved "https://registry.yarnpkg.com/@mupi/core/-/core-0.0.2-alpha.14.tgz#2e89e072a38c7f3a78857b7d0e1a69ce67af1c59"
-  integrity sha512-j6sDlt8omKjYeLophllU1NjcYAXH5wbRoxf5slnSUUVcjkZleIBT8qFPKqfufwRjh+QzLkxeWoorL/0iuPJsiw==
+"@mupi/core@^0.0.2-alpha.18":
+  version "0.0.2-alpha.18"
+  resolved "https://registry.yarnpkg.com/@mupi/core/-/core-0.0.2-alpha.18.tgz#033f62e28d1ce3104c21dbe85cfc1521204f2f56"
+  integrity sha512-44YP2eqKk+ctlcfoMQeYvIA2aS3UA0G81XEtIR6lVonLBeeezFArQ1WTXUACu5yvsTx6jVx2zubtxJIKNEgu+g==
   dependencies:
     reflect-metadata "^0.1.13"
     tslib "^2.3.0"
 
-"@mupi/schematics@^0.0.2-alpha.48":
-  version "0.0.2-alpha.48"
-  resolved "https://registry.yarnpkg.com/@mupi/schematics/-/schematics-0.0.2-alpha.48.tgz#9005198df0ba54cae9feac249d5856cef9df3355"
-  integrity sha512-sX2iiV7CbibhiA2lf1s1/ljFO6oac9/TNm+JZHfTUxocTqu7dZMN9HkXjJu9ABnn07jfgHYxAHFPtl2uqnhJxQ==
+"@mupi/schematics@^0.0.2-alpha.59":
+  version "0.0.2-alpha.59"
+  resolved "https://registry.yarnpkg.com/@mupi/schematics/-/schematics-0.0.2-alpha.59.tgz#2486dd5feea3b5b382f08b5ca208213ea2d979b8"
+  integrity sha512-2FJlW3q9Qti0sU4VEdsdJwauM0Q6w6uaFC55iYLwQMNjMs386nILhFiKM4Zdt1BdNNfPxeyHNgz/pe3ReRi3GQ==
   dependencies:
     "@angular-devkit/core" "^12.1.1"
     "@angular-devkit/schematics" "^12.1.1"

@@ -1,9 +1,13 @@
 import { strings } from '@angular-devkit/core';
 
 export class SchematicOption {
-  constructor(private name: string, private value: boolean | string) {}
+  constructor(private name: string, private value: boolean | string | any) {}
 
   public toCommandString(): string {
+    if (this.value && this.value.length && typeof this.value !== 'string') {
+      return `--${this.name}=${JSON.stringify(this.value)}`;
+    }
+
     if (typeof this.value === 'string') {
       if (this.name === 'name') {
         return `--${this.name}=${this.format()}`;
