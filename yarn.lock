@@ -952,10 +952,10 @@
     reflect-metadata "^0.1.13"
     tslib "^2.3.0"
 
-"@mupi/schematics@^0.0.2-alpha.59":
-  version "0.0.2-alpha.59"
-  resolved "https://registry.yarnpkg.com/@mupi/schematics/-/schematics-0.0.2-alpha.59.tgz#2486dd5feea3b5b382f08b5ca208213ea2d979b8"
-  integrity sha512-2FJlW3q9Qti0sU4VEdsdJwauM0Q6w6uaFC55iYLwQMNjMs386nILhFiKM4Zdt1BdNNfPxeyHNgz/pe3ReRi3GQ==
+"@mupi/schematics@^0.0.2-alpha.60":
+  version "0.0.2-alpha.60"
+  resolved "https://registry.yarnpkg.com/@mupi/schematics/-/schematics-0.0.2-alpha.60.tgz#9e7845cba7d225cfc8658b914d7c48ec1f8c5c94"
+  integrity sha512-58UU2mDELNJT05S7O2KRSP6dlK1v00d+d1YYt+NCdabCphPfnOnq5CrkpRco/NConltj65z7fuv/2641kKRgFw==
   dependencies:
     "@angular-devkit/core" "^12.1.1"
     "@angular-devkit/schematics" "^12.1.1"
