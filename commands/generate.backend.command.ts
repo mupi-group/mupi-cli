@@ -9,6 +9,10 @@ export class GenerateBackendCommand extends BaseCommand {
       .description(`create the basic backend logic via model, 
                                     you may deploy the generated code directly\n`)
       .option(
+        '-e, --env [env]',
+        'default deploy env you want to choose(prod by default)',
+      )
+      .option(
         '-s, --service [service]',
         'default cloud service you want to choose(aws by default)',
       )
@@ -53,6 +57,11 @@ export class GenerateBackendCommand extends BaseCommand {
         options.push({
           name: 'service',
           value: command.service || GenerateBackendCommand.findClosestMupiConfig().service || 'aws',
+        });
+
+        options.push({
+          name: 'env',
+          value: GenerateBackendCommand.findClosestMupiConfig().env || 'prod',
         });
 
         inputs.push({ name: 'name', value: name });
