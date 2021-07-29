@@ -70,7 +70,7 @@ export class GenerateBackendAction extends BaseAction {
             return schematicOptions;
           }, [],
         ));
-      await collection.execute('express-service', args
+      await collection.execute('apollo-service', args
         .concat(
           options,
         ).reduce(

@@ -26,8 +26,8 @@ export class MupiCollection extends BaseCollection {
       description: 'Generate the graphQL schema from the model',
     },
     {
-      name: 'express-service',
-      alias: 'express-service',
+      name: 'apollo-service',
+      alias: 'apollo-service',
       description: 'Generate a sample express.js application from the model',
     },
   ];
