@@ -28,7 +28,7 @@ export class MupiCollection extends BaseCollection {
     {
       name: 'apollo-service',
       alias: 'apollo-service',
-      description: 'Generate a sample express.js application from the model',
+      description: 'Generate a sample apollo service application from the model',
     },
   ];
 
