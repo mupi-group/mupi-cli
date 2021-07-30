@@ -1,7 +1,7 @@
 {
   "name": "@mupi/cli",
-  "version": "0.0.2-alpha.71",
-  "description": "",
+  "version": "0.0.4",
+  "description": "A serverless solution that init, develop, deploy your code as micro service/frontend from a single dto model.",
   "scripts": {
     "start": "ts-node -r tsconfig-paths/register bin/mupi.ts",
     "build": "tsc && tsc-alias && cpx 'bin/*.sh' build/bin",
@@ -12,7 +12,7 @@
     "mupi": "build/bin/mupi.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "mupijs",
   "license": "ISC",
   "devDependencies": {
     "@types/chalk": "^2.2.0",
@@ -32,8 +32,8 @@
     "@angular-devkit/schematics": "11.2.6",
     "@angular-devkit/schematics-cli": "0.1102.6",
     "@babel/preset-env": "^7.14.7",
-    "@mupi/core": "^0.0.2-alpha.18",
-    "@mupi/schematics": "^0.0.2-alpha.77",
+    "@mupi/core": "^0.0.4",
+    "@mupi/schematics": "^0.0.4",
     "@types/inquirer": "^7.3.3",
     "chalk": "^4.1.1",
     "cli-table3": "^0.6.0",
